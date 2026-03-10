@@ -1,11 +1,11 @@
 // Système de routage SPA
 const router = {
     routes: {
-        '#maison': '/templates/home.html',
-        '#cv': '/templates/cv.html',
-        '#portefeuille': '/templates/portefeuille.html',
-        '#blog': '/templates/blog.html',
-        '#contact': '/templates/contact.html'
+        '#maison': './templates/home_fragment.html',
+        '#cv': './templates/cv.html',
+        '#portefeuille': './templates/portefeuille.html',
+        '#blog': './templates/blog.html',
+        '#contact': './templates/contact.html'
     },
 
     init() {
