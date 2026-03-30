@@ -149,14 +149,51 @@ const router = {
             });
         });
 
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            let hasError = false;
             // Vérification finale avant envoi
             inputs.forEach(input => {
                 if (/[<>]/.test(input.value) || /javascript:/i.test(input.value)) {
-                    e.preventDefault();
+                    hasError = true;
                     alert("Pour des raisons de sécurité, le code et les balises HTML ne sont pas autorisés.");
                 }
             });
+
+            if (hasError) return;
+
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.textContent;
+            submitBtn.textContent = 'Envoi en cours...';
+            submitBtn.disabled = true;
+
+            try {
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData);
+
+                const response = await fetch("https://formsubmit.co/ajax/ahmedbangoura852@gmail.com", {
+                    method: "POST",
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    alert('Votre message a été envoyé avec succès !');
+                    form.reset();
+                } else {
+                    throw new Error('Erreur lors de l\'envoi');
+                }
+            } catch (error) {
+                console.error('Erreur lors de l\'envoi du formulaire:', error);
+                alert('Une erreur est survenue lors de l\'envoi. Veuillez réessayer plus tard.');
+            } finally {
+                submitBtn.textContent = originalBtnText;
+                submitBtn.disabled = false;
+            }
         });
     }
 };
