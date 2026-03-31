@@ -1359,28 +1359,20 @@ h1 {
     justify-content: flex-end;
 }
 
-.image-cutout {
+.photo-container {
+    width: 180px;
+    height: 180px;
     position: relative;
-    width: 350px;
-    height: 450px;
-    /* Découpe géométrique diagonale "Sharp" */
-    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
-    overflow: hidden;
-    box-shadow: -20px 20px 0px rgba(46, 204, 113, 0.05);
+    margin: 0 auto;
 }
 
-.image-cutout img {
+.photo-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.1);
-    transition: transform 0.5s ease, filter 0.5s ease;
-    filter: grayscale(30%) contrast(1.1); /* Look studio cinématique */
-}
-
-.image-cutout:hover img {
-    transform: scale(1.0);
-    filter: grayscale(0%) contrast(1.0);
+    border-radius: 50%;
+    border: 3px solid rgba(46, 204, 113, 0.5);
+    box-shadow: 0 0 25px rgba(46, 204, 113, 0.3);
 }
 
 .hero-content {
@@ -1459,9 +1451,9 @@ h1 {
         padding-bottom: 0.5rem;
     }
     
-    .image-cutout {
-        width: 280px;
-        height: 350px;
+    .photo-container {
+        width: 150px;
+        height: 150px;
     }
     
     .hero-name {
