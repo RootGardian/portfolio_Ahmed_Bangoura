@@ -187,6 +187,75 @@
             </div>
         </div>
 
+        <!-- Projet Infrastructure Systèmes et Sécurité -->
+        <div class="project-card">
+            <div class="project-image" style="display: flex; align-items: center; justify-content: center; background-color: rgba(0,0,0,0.2);">
+                <i class="fas fa-server" style="font-size: 80px; color: var(--primary-color);"></i>
+            </div>
+            <div class="project-content">
+                <div class="project-header">
+                    <h3>Infrastructure Systèmes & Sécurité</h3>
+                </div>
+                <div class="tech-stack">
+                    Linux | Apache | MariaDB | Sécurité | Supervision
+                </div>
+                <p class="project-description">
+                    Conception et déploiement d'une infrastructure d'entreprise sécurisée pour DataSphere Labs : hébergement web HTTPS, partage de fichiers et monitoring complet.
+                </p>
+                <div class="project-links">
+                    <a href="#" class="details-btn" data-modal-target="infra-sys-sec-modal">
+                        <i class="fas fa-info-circle"></i> Voir les détails
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet InvestX : Simulation et Analyse -->
+        <div class="project-card">
+            <div class="project-image" style="display: flex; align-items: center; justify-content: center; background-color: rgba(0,0,0,0.2);">
+                <i class="fas fa-chart-line" style="font-size: 80px; color: var(--primary-color);"></i>
+            </div>
+            <div class="project-content">
+                <div class="project-header">
+                    <h3>InvestX : Simulation & Analyse Boursière</h3>
+                </div>
+                <div class="tech-stack">
+                    React | Node.js | SQL | APIs Financières | WebSockets
+                </div>
+                <p class="project-description">
+                    Plateforme FinTech full-stack de simulation boursière avec flux de données temps réel, architecture de trading, et algorithmes financiers complexes.
+                </p>
+                <div class="project-links">
+                    <a href="#" class="details-btn" data-modal-target="investx-modal">
+                        <i class="fas fa-info-circle"></i> Voir les détails
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet Majordome de Salle de Sécurité (IoT) -->
+        <div class="project-card">
+            <div class="project-image" style="display: flex; align-items: center; justify-content: center; background-color: rgba(0,0,0,0.2);">
+                <i class="fas fa-microchip" style="font-size: 80px; color: var(--primary-color);"></i>
+            </div>
+            <div class="project-content">
+                <div class="project-header">
+                    <h3>Majordome de Salle de Sécurité</h3>
+                </div>
+                <div class="tech-stack">
+                    IoT | Capteurs | Microcontrôleur | Dashboard | Sécurité
+                </div>
+                <p class="project-description">
+                    Système IoT intelligent conçu pour surveiller une salle de sécurité en temps réel : détection de mouvement, alertes, température, humidité et dashboard dédié.
+                </p>
+                <div class="project-links">
+                    <a href="#" class="details-btn" data-modal-target="iot-modal">
+                        <i class="fas fa-info-circle"></i> Voir les détails
+                    </a>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 
@@ -484,6 +553,110 @@
                 <li><strong>Communication sécurisée :</strong> Interconnexion de sites via VPN IPsec pour la confidentialité des flux de réplication.</li>
                 <li><strong>Triade CIA :</strong> Application des principes de Confidentialité (ACLs), Intégrité (RAID) et Disponibilité (Backups/Redondance).</li>
                 <li><strong>Monitoring :</strong> Surveillance proactive pour anticiper les pannes et détecter les comportements suspects sur l'AD.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Modale pour le projet Infrastructure Systèmes et Sécurité -->
+<div id="infra-sys-sec-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2><i class="fas fa-server"></i> Infrastructure Systèmes & Sécurité (DataSphere Labs)</h2>
+        
+        <div class="modal-section">
+            <h3>Serveur Web App</h3>
+            <ul>
+                <li><strong>Infrastructure Linux :</strong> Mise en place d'un serveur dédié accueillant Apache et MariaDB/MySQL pour garantir performance et fiabilité.</li>
+                <li><strong>Sécurité Web Avancée :</strong> Intégration de certificats SSL/TLS pour forcer le HTTPS, application du principe de moindre privilège sur les fichiers, et sécurisation des headers.</li>
+                <li><strong>Protection des Données :</strong> Durcissement des accès à la base de données, application de politiques strictes de mots de passe et défense proactive contre les injections SQL.</li>
+            </ul>
+        </div>
+
+        <div class="modal-section">
+            <h3>Partage de Fichiers & Collaboration</h3>
+            <ul>
+                <li><strong>Centralisation des Données :</strong> Déploiement d'un service de partage réseau sous Linux optimisé pour la collaboration interne.</li>
+                <li><strong>Contrôle d'Accès Granulaire :</strong> Configuration avancée de la gestion IAM (Identity and Access Management) et élaboration de permissions strictes par rôle ou département.</li>
+                <li><strong>Confidentialité des Échanges :</strong> Authentification robuste des utilisateurs avec intégration de chiffrements pour protéger les données sensibles.</li>
+            </ul>
+        </div>
+
+        <div class="modal-section">
+            <h3>Supervision, Réseau & Hardening</h3>
+            <ul>
+                <li><strong>Monitoring et Alertes Proactives :</strong> Mise en œuvre d'outils de supervision afin de traquer l'utilisation CPU/RAM, de veiller sur l'espace disque et de contrôler la disponibilité des trois serveurs critiques.</li>
+                <li><strong>Durcissement du Périphérique (Hardening) :</strong> Sécurisation agressive des connexions SSH (suppression de l'accès root, port custom, clés asymétriques) combinée avec un filtrage rigoureux du Pare-Feu.</li>
+                <li><strong>Documentation Stratégique :</strong> Élaboration des livrables de documentation technique et schémas d'architecture justifiant les décisions prises dans ce projet d'infrastructure.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Modale pour le projet InvestX -->
+<div id="investx-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2><i class="fas fa-chart-line"></i> InvestX : Plateforme de Simulation et d'Analyse (FinTech)</h2>
+        
+        <div class="modal-section">
+            <h3>Architecture Full-Stack & Sécurité</h3>
+            <ul>
+                <li><strong>Gestion des Identités :</strong> Déploiement d'une authentification sécurisée avec Refresh Tokens et Middlewares JWT pour la protection des routes sensibles de trading.</li>
+                <li><strong>Base de données Relationnelle SQL :</strong> Conception d'un MCD/MLD optimisé garantissant l'atomicité des transactions financières et le blocage du double-spending (Locking).</li>
+                <li><strong>Validation Solvabilité :</strong> Contrôle backend strict et temps réel de l'état du portefeuille (capital initial, cash disponible) avant toute validation d'ordre d'achat/vente.</li>
+            </ul>
+        </div>
+
+        <div class="modal-section">
+            <h3>Moteur de Trading & APIs Financières</h3>
+            <ul>
+                <li><strong>Marché en Temps Réel :</strong> Intégration avancée d'APIs tierces (Finnhub, Twelve Data) et WebSockets pour injecter des cotations boursières volatiles et actualiser l'interface instantanément.</li>
+                <li><strong>Passage d'Ordres Complexes :</strong> Gestion de la logique d'ordres au Marché (Market Order) et d'ordres à Limite (Limit Order) de manière asynchrone et sécurisée.</li>
+                <li><strong>Algorithmique Financière :</strong> Implémentation du Prix Unitaire Moyen Pondéré (PUMP) lors d'achats multiples, calculs de marges et gestion dynamique de la conversion multi-devises.</li>
+            </ul>
+        </div>
+
+        <div class="modal-section">
+            <h3>Analyse, Monitoring & Expérience Utilisateur</h3>
+            <ul>
+                <li><strong>Tableau de Bord Intéractif :</strong> Visualisation des performances avec calcul de l'Equity, profit/perte, et tracés de graphiques en chandeliers japonais (Candlestick charts).</li>
+                <li><strong>Notifications Anticipees :</strong> Création d'un système d'alertes avertissant l'utilisateur de franchissements de seuils de prix critiques ou de l'exécution d'ordres limites.</li>
+                <li><strong>Défis d'Architecture :</strong> Création expérimentale d'un Order Book interne (Matching Interne Prix/Temps FIFO) et implémentation fine de techniques d'analyse de sentiment (NLP) appliquées à l'actualité économique.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Modale pour le projet IoT Majordome -->
+<div id="iot-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2><i class="fas fa-microchip"></i> Majordome de Salle de Sécurité (IoT)</h2>
+        
+        <div class="modal-section">
+            <h3>Surveillance Proactive et Détection</h3>
+            <ul>
+                <li><strong>Détection de mouvements précise :</strong> Grâce à des capteurs dédiés, le système confirme et détecte immédiatement toute intrusion dans la salle.</li>
+                <li><strong>Alertes instantanées :</strong> Déclenchement automatique d'une alerte lumineuse et d'un bip sonore afin d'avertir d'une présence et garantir une réaction quasi instantanée.</li>
+                <li><strong>Mode Veille :</strong> Un témoin bleu permanent rassure sur l'état de fonctionnement de la surveillance globale.</li>
+            </ul>
+        </div>
+
+        <div class="modal-section">
+            <h3>Monitoring Environnemental</h3>
+            <ul>
+                <li><strong>Mesure en continu :</strong> Le système IoT intègre des sondes qui mesurent en permanence la température et l'humidité de la salle.</li>
+                <li><strong>Intégrité du Matériel :</strong> Prévient des conditions atmosphériques dégradées qui pourraient nuire à un environnement de sécurité critique.</li>
+            </ul>
+        </div>
+
+        <div class="modal-section">
+            <h3>Dashboard et Pilotage Centralisé</h3>
+            <ul>
+                <li><strong>Visualisation temps réel :</strong> Toutes les données récoltées par les capteurs sont retranscrites dans un dashboard clair et instantané.</li>
+                <li><strong>Monitoring à distance :</strong> Permet aux équipes de surveiller la sécurité et le confort de la salle via une plateforme centralisée simple.</li>
+                <li><strong>Solution "Tout-en-un" :</strong> Combine magistralement sécurité physique, surveillance des anomalies, confort et monitoring.</li>
             </ul>
         </div>
     </div>
